@@ -12,5 +12,7 @@ Simple Android camera app
 http://47.95.13.239/Study/Android/test.gif
 
 生成的APK文件下载地址：
+
 https://raw.githubusercontent.com/ZHJ0125/AndroidSimpleCameraApp/master/app-debug.apk
+
 该文件已在Android7.1.1版本的手机上测试通过，其他Android版本的手机使用时可能会出现问题。
