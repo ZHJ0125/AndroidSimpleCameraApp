@@ -20,3 +20,10 @@ https://raw.githubusercontent.com/ZHJ0125/AndroidSimpleCameraApp/master/app-debu
 # 项目制作过程：
 
 https://blog.csdn.net/ZHJ123CSDN/article/details/89880558
+
+
+# 目前发现的bug:
+
+  1.如果系统文件夹下未创建“test”文件夹，程序会闪退。
+  
+  2.未进行动态权限申请. 除Android 7.1.1版本外，其他版本会在权限上出现问题。
