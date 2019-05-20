@@ -9,13 +9,15 @@ Simple Android camera app
 
 ![image](https://raw.githubusercontent.com/ZHJ0125/AndroidSimpleCameraApp/master/%E6%95%88%E6%9E%9C%E5%9B%BE.gif)
 
-http://47.95.13.239/Study/Android/test.gif
+说明：该效果只是最初版本效果，暂时未进行更新。
+
+效果图地址：http://47.95.13.239/Study/Android/test.gif
 
 # 生成的APK文件下载地址：
 
 https://raw.githubusercontent.com/ZHJ0125/AndroidSimpleCameraApp/master/app-debug.apk
 
-该文件已在Android7.1.1、Android 4.0.2版本的手机上测试通过，其他Android版本的手机使用时可能会出现问题。
+该文件已在Android7.1.1、Android 4.0.2版本的手机上测试通过，其他Android版本的手机未测试，使用时可能会出现问题。
 
 # 项目制作过程：
 
@@ -29,3 +31,9 @@ https://blog.csdn.net/ZHJ123CSDN/article/details/89880558
   2.未进行动态权限申请. 除Android 7.1.1版本外，其他版本会在权限上出现问题。 (已解决)
 
   3.Android 8.0版本的手机，拍照所得的图片会发生倾斜90°的现象，其他版本则不会。 (未解决)
+
+# 进展说明
+  
+  2019年5月5日，上传了所有文件。
+  
+  2019年5月20日，解决了“系统文件夹下未创建“test”文件夹，程序会闪退”、及“动态权限申请”问题。更新了APK版本及部分代码。
