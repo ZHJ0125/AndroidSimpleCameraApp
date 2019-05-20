@@ -38,8 +38,10 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
      **/
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        PermisionUtils.verifyStoragePermissions(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //关联ID
         mImageView = (ImageView)findViewById(R.id.imageView1);
         cameraBtn = (Button)findViewById(R.id.btn1);
@@ -76,6 +78,25 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
         mCamera = null;
     }
 
+    /**
+    * 判断文件夹是否存在，不存在则创建
+    *
+    * */
+    boolean isFolderExists(String strFolder)
+    {
+        File file = new File(strFolder);
+        if (!file.exists())
+        {
+            if (file.mkdir())
+            {
+                return true;
+            }
+            else
+                return false;
+        }
+        return true;
+    }
+
 
     /**
      * class：jpegCallback
@@ -84,6 +105,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
     public class jpegCallback implements PictureCallback{
         @Override
         public void onPictureTaken (byte[] data, Camera camera){
+            isFolderExists("/sdcard/test");     //检测文件夹是否存在
             Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
             ArrayList<String> list = getFile("/sdcard/test");
             path = "/sdcard/test/" + checkFileName(list, filename, 0);
@@ -171,6 +193,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
         //System.out.println("here1....");
         Camera.Parameters parameters = mCamera.getParameters();
         parameters.setPictureFormat(PixelFormat.JPEG);  //照片格式
+        //parameters.getSupportedPreviewSizes();
         parameters.setPreviewSize(320, 240);    //预览规格大小
         parameters.setPictureSize(320, 240);    //图片大小
         parameters.setRotation(90);           //设置照片数据旋转90°
