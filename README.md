@@ -17,7 +17,7 @@ Simple Android camera app
 
 https://raw.githubusercontent.com/ZHJ0125/AndroidSimpleCameraApp/master/app-debug.apk
 
-该文件已在Android7.1.1、Android 4.0.2版本的手机上测试通过，其他Android版本的手机未测试，使用时可能会出现问题。
+该文件已在Android7.1.1、Android 4.4.2、Android 6.0版本的手机上测试通过，其他Android版本的手机未测试，使用时可能会出现问题。
 
 # 项目制作过程：
 
