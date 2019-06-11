@@ -29,8 +29,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback{
     Button cameraBtn, exitBtn;
     TextView textView;
     int i = 0;
-    String filename = "camera.jpg";    //图片文件名
-    String path = "";   //图片保存路径
+    String filename = "camera.jpg";     //图片文件名
+    String path = "";                   //图片保存路径
 
     /**
      *  Override the onCreate
